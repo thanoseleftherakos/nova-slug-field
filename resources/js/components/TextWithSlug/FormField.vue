@@ -54,7 +54,8 @@
 
         methods: {
             handleKeydown(event) {
-                Nova.$emit('field-update-' + this.field.slug, {
+                let value = event.target.id.replace('Title','Slug');
+                Nova.$emit('field-update-' + value, {
                     value: event.target.value
                 })
             },
